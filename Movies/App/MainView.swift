@@ -23,16 +23,16 @@ struct TabBarItem: ViewModifier {
 struct MainView: View {
     var body: some View {
         TabView {
-            Text("Home View")
+            HomeView()
                 .modifier(TabBarItem(systemName: "house.fill", textName: "House"))
             
-            Text("Search View") // SearchView() will go here
+            SearchView()
                 .modifier(TabBarItem(systemName: "magnifyingglass", textName: "Search"))
             
-            Text("Favorites View") // FavoritesView() will go here
-                .modifier(TabBarItem(systemName: ".", textName: "Favorites"))
+            FavoritesView()
+                .modifier(TabBarItem(systemName: "heart.fill", textName: "Favorites"))
             
-            Text("Profile View") // ProfileView() will go here
+            ProfileView()
                 .modifier(TabBarItem(systemName: "person.fill", textName: "Profile"))
         }
         .tint(.primary)
